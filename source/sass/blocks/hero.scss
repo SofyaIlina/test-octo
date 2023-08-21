@@ -1,0 +1,14 @@
+.hero {
+  background: $color-black url('../../img/hero-bg.jpg');
+  color: $color-default-white;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  &__title {
+    font-size: 62px;
+    line-height: 68px;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
