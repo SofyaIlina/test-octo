@@ -35,12 +35,6 @@
         }
       }
     }
-
-    @include vp-575 {
-      &:nth-child(3n) {
-        display: none;
-      }
-    }
   }
 
   &__btn-wrapper {
