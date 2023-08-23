@@ -1,0 +1,88 @@
+.slider {
+  &__item {
+    &:nth-child(1n) {
+      @include theme--irish-blue;
+
+      svg {
+        color: $color-hawkes-blue;
+      }
+
+      .card-category__title span:not(:nth-child(1)) {
+        display: none;
+      }
+    }
+
+    &:nth-child(3n) {
+      @include theme--navy;
+
+      svg {
+        color: $color-tickle-me-pink;
+      }
+
+      .card-category__marketing {
+        display: none;
+      }
+
+      .card-category__title span {
+        display: none;
+      }
+    }
+
+    @include vp-992 {
+      &:nth-child(3n) {
+        .card-category__title span:nth-child(1) {
+          display: inline;
+        }
+      }
+    }
+
+    @include vp-575 {
+      &:nth-child(3n) {
+        display: none;
+      }
+    }
+  }
+
+  &__btn-wrapper {
+    margin-top: 40px;
+    display: flex;
+
+    @include vp-768 {
+      margin-top: 30px;
+    }
+
+    @include vp-576 {
+      margin-top: 20px;
+    }
+
+    @include vp-575 {
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background: transparent;
+    color: $color-iris-blue;
+    position: static;
+    padding: 0;
+
+    &::after {
+      font-size: 26px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    @include vp-576 {
+      &::after {
+        font-size: 21px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 18px;
+      }
+    }
+  }
+}

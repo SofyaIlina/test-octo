@@ -1,0 +1,23 @@
+.btn {
+  font-size: 13px;
+  letter-spacing: 0.09em;
+  text-align: center;
+  padding: 7px 16px;
+  line-height: 20px;
+  user-select: none;
+
+  color: $color-default-white;
+
+  background-color: $color-iris-blue;
+  cursor: pointer;
+
+  &--transparent {
+    background-color: transparent;
+    border: 1px solid $color-iris-blue;
+  }
+
+  @include vp-768 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

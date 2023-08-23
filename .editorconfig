@@ -9,6 +9,7 @@
 # скачайте дополнение для вашего редактора.
 
 root = true
+autocrlf = false
 
 [*]
 charset = utf-8

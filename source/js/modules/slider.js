@@ -1,13 +1,13 @@
 const initSwiper = () => {
-  new Swiper('.swiper--coaches', { // eslint-disable-line
+  new Swiper('.swiper', { // eslint-disable-line
     direction: 'horizontal',
     loop: true,
 
     navigation: {
-      nextEl: '.coaches__btn--next',
-      prevEl: '.coaches__btn--prev',
+      nextEl: '.slider__btn--next',
+      prevEl: '.slider__btn--prev',
     },
-    spaceBetween: 40,
+    spaceBetween: 30,
     maxBackfaceHiddenSlides: 0,
     keyboard: {
       enabled: true,
@@ -17,31 +17,15 @@ const initSwiper = () => {
       320: {
         slidesPerView: 1,
       },
-      768: {
+      576: {
         slidesPerView: 2,
-        spaceBetween: 30,
-        initialSlide: 6,
+        initialSlide: 2,
       },
-      1200: {
-        slidesPerView: 4,
-        initialSlide: 4,
+      993: {
+        slidesPerView: 3,
       },
     },
-  });
-};
-
-const initReviewsSwiper = () => {
-  new Swiper('.swiper--reviews', { // eslint-disable-line
-    direction: 'horizontal',
-
-    navigation: {
-      nextEl: '.reviews__btn--next',
-      prevEl: '.reviews__btn--prev',
-    },
-
-    slidesPerView: 1,
   });
 };
 
 initSwiper();
-initReviewsSwiper();

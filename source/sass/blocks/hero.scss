@@ -1,14 +1,41 @@
 .hero {
-  background: $color-black url('../../img/hero-bg.jpg');
+  background: $color-black url("../img/hero-bg.jpg");
+  background-size: cover 100%;
+  background-position: top center;
   color: $color-default-white;
-  padding-top: 120px;
-  padding-bottom: 120px;
+
+  @include vp-992 {
+    background-position: top left;
+  }
 
   &__title {
     font-size: 62px;
-    line-height: 68px;
-    margin: 0;
-    margin-bottom: 20px;
+    line-height: 66px;
+    letter-spacing: 0.02em;
+    margin: 20px auto 40px;
     text-align: center;
+    max-width: 750px;
+
+    @include vp-992 {
+      font-size: 54px;
+      line-height: 60px;
+      max-width: 617px;
+    }
+
+    @include vp-768 {
+      font-size: 46px;
+      line-height: 48px;
+      max-width: 470px;
+    }
+
+    @include vp-576 {
+      max-width: 450px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    @include vp-575 {
+      margin-bottom: 20px;
+    }
   }
 }
